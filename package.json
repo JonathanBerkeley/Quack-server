@@ -1,0 +1,29 @@
+{
+  "name": "quack-server",
+  "version": "0.0.2",
+  "description": "Server-side software for the anti-cheat Quack",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanBerkeley/quack-server.git"
+  },
+  "keywords": [
+    "anti-cheat",
+    "heartbeat",
+    "security"
+  ],
+  "author": "Jonathan Berkeley",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/JonathanBerkeley/quack-server/issues"
+  },
+  "homepage": "https://github.com/JonathanBerkeley/quack-server#readme",
+  "dependencies": {
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
