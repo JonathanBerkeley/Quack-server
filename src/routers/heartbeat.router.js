@@ -1,6 +1,6 @@
 import { Router } from "express"
 
-import Heartbeat from "../controllers/heartbeat.controller"
+import Heartbeat from "../controllers/heartbeat.controller.js"
 
 const router = Router()
 router.get("/", Heartbeat.Get)

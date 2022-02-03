@@ -1,6 +1,6 @@
 import express from "express"
 
-import HeartbeatRouter from "./routers/heartbeat.router"
+import HeartbeatRouter from "./routers/heartbeat.router.js"
 
 const app = express()
 
