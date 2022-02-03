@@ -1,6 +1,5 @@
 import { MongoClient } from "mongodb"
 import dotenv from "dotenv"
-import http from "http"
 
 import app from "./server.js"
 
