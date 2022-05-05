@@ -2,6 +2,7 @@ import { MongoClient } from "mongodb"
 import dotenv from "dotenv"
 
 import app from "./server.js"
+import DetectionDAO from "./dao/detection.dao.js"
 
 if (dotenv.config().error) {
     console.error("[ Error ] => ENV file invalid, missing or cannot be read")
@@ -11,13 +12,16 @@ class Config {
     static DB_URI = process.env.DB_URI
     static DB_NAME = process.env.DB_NAME
     static PORT = process.env.PORT
-    // static CLIENT = new MongoClient(this.DB_URI)
+    static CLIENT = new MongoClient(this.DB_URI)
     
     static DEV_MODE = true
     static VERSION = process.env.npm_package_version
 }
 
 async function main() {
+    await Config.CLIENT.connect()
+    await DetectionDAO.InjectDB(Config.CLIENT)
+
     app.listen(Config.PORT, () => {
         console.assert(Config.DEV_MODE, "[ Warning ] => in production mode")
 

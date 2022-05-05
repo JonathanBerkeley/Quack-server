@@ -1,9 +1,8 @@
 import { Router } from "express"
 
-import Heartbeat from "../controllers/heartbeat.controller.js"
+import HeartbeatController from "../controllers/heartbeat.controller.js"
 
 const router = Router()
-router.get("/", Heartbeat.Get)
-router.post("/", Heartbeat.Post)
+router.post("/", HeartbeatController.Post)
 
 export default router

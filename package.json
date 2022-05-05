@@ -1,6 +1,6 @@
 {
   "name": "quack-server",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Server-side software for the anti-cheat Quack",
   "main": "src/main.js",
   "type": "module",
@@ -29,6 +29,7 @@
     "dotenv": "^15.0.1",
     "express": "^4.17.2",
     "mongodb": "^4.3.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "uuid-by-string": "^3.0.6"
   }
 }
