@@ -1,5 +1,6 @@
 # Quack server
-Server-side software for the anti-cheat Quack
+Server-side software for the anti-cheat Quack    
+https://github.com/JonathanBerkeley/Quack    
 
 # Project styleguide
 

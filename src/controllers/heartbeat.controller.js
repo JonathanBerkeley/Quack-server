@@ -7,5 +7,4 @@ export default class Heartbeat {
         })
         console.log("Heartbeat: ", heartbeat)
     }
-
 }
