@@ -1,6 +1,6 @@
 {
   "name": "quack-server",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Server-side software for the anti-cheat Quack",
   "main": "src/main.js",
   "type": "module",

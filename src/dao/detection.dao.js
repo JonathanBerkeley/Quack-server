@@ -18,7 +18,7 @@ export default class DetectionDAO extends DAO {
     static async Detection(detection) {
         try {
             await detections.updateOne(
-                { _id: getUuid(detection.uuid).trim() },
+                { _id: detection.uuid },
                 { $set: {
                     cheat : detection.cheat,
                     path : detection.path,
