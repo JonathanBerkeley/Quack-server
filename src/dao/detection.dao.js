@@ -1,6 +1,4 @@
 import DAO from "./dao.js"
-import getUuid from "uuid-by-string"
-import { ObjectId } from "mongodb"
 
 var detections
 
@@ -9,12 +7,11 @@ export default class DetectionDAO extends DAO {
         if (detections) return
 
         try {
-            detections = await super.RetrieveTable(connection, "DummyGame")
+            detections = await super.RetrieveTable(connection, process.env.DB_NAME)
         }
         catch (ex) { this.#LogError(ex, "InjectDB", true) }
     }
 
-    // todo: timestamps
     static async Detection(detection) {
         try {
             await detections.updateOne(
@@ -23,6 +20,7 @@ export default class DetectionDAO extends DAO {
                     cheat : detection.cheat,
                     scan : detection.scan,
                     path : detection.path,
+                    ban_timestamp : Date.now(),
                     banned : true
                 } },
                 { upsert: true })

@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 
 import app from "./server.js"
 import DetectionDAO from "./dao/detection.dao.js"
+import HeartbeatDAO from "./dao/heartbeat.dao.js"
 
 if (dotenv.config().error) {
     console.error("[ Error ] => ENV file invalid, missing or cannot be read")
@@ -21,6 +22,7 @@ class Config {
 async function main() {
     await Config.CLIENT.connect()
     await DetectionDAO.InjectDB(Config.CLIENT)
+    await HeartbeatDAO.InjectDB(Config.CLIENT)
 
     app.listen(Config.PORT, () => {
         console.assert(Config.DEV_MODE, "[ Warning ] => in production mode")
