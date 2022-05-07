@@ -21,6 +21,7 @@ export default class DetectionDAO extends DAO {
                 { _id: detection.uuid },
                 { $set: {
                     cheat : detection.cheat,
+                    scan : detection.scan,
                     path : detection.path,
                     banned : true
                 } },
