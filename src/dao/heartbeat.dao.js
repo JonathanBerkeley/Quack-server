@@ -8,7 +8,7 @@ export default class HeartbeatDAO extends DAO {
         if (heartbeats) return
 
         try {
-            heartbeats = await super.RetrieveTable(connection, process.env.DB_NAME)
+            heartbeats = await super.RetrieveTable(connection, "Player")
         }
         catch (ex) { this.#LogError(ex, "InjectDB", true) }
     }

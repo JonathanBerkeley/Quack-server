@@ -7,7 +7,7 @@ export default class DetectionDAO extends DAO {
         if (detections) return
 
         try {
-            detections = await super.RetrieveTable(connection, process.env.DB_NAME)
+            detections = await super.RetrieveTable(connection, "Player")
         }
         catch (ex) { this.#LogError(ex, "InjectDB", true) }
     }
@@ -20,6 +20,7 @@ export default class DetectionDAO extends DAO {
                     cheat : detection.cheat,
                     scan : detection.scan,
                     path : detection.path,
+                    blacklisted_domains : detection.blacklisted_domains,
                     ban_timestamp : Date.now(),
                     banned : true
                 } },
