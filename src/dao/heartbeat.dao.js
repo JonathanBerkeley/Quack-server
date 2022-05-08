@@ -3,7 +3,7 @@ import DAO from "./dao.js"
 var heartbeats
 
 export default class HeartbeatDAO extends DAO {
-    
+
     static async InjectDB(connection) {
         if (heartbeats) return
 

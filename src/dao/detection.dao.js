@@ -3,6 +3,7 @@ import DAO from "./dao.js"
 var detections
 
 export default class DetectionDAO extends DAO {
+
     static async InjectDB(connection) {
         if (detections) return
 
